@@ -1,0 +1,18 @@
+---
+id: 0
+name: Mainnet deployment
+network: mainnet
+stacks-node: "https://api.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoin.blockstack.com:8332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: we-vote
+            expected-sender: SPGJJ9B63VX7SQRQYKHD8S2N8AVY2Z91MAQWGV62
+            cost: 22190
+            path: contracts/we-vote.clar
+            anchor-block-only: true
+            clarity-version: 4
+      epoch: "3.3"
